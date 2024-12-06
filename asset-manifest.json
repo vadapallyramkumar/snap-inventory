@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/snap-inventory/static/css/main.79d0d26b.css",
-    "main.js": "/snap-inventory/static/js/main.53caf706.js",
+    "main.js": "/snap-inventory/static/js/main.49ad3788.js",
     "static/js/453.6ae5fd4b.chunk.js": "/snap-inventory/static/js/453.6ae5fd4b.chunk.js",
     "static/media/updateEntry.png": "/snap-inventory/static/media/updateEntry.044e1c02c0e0ac7a0085.png",
     "static/media/Removemember.png": "/snap-inventory/static/media/Removemember.27507d3219b82e30b2db.png",
@@ -63,11 +63,11 @@
     "static/media/icon_read.svg": "/snap-inventory/static/media/icon_read.e1b3766c2a07333e961b84ad4d040f9e.svg",
     "index.html": "/snap-inventory/index.html",
     "main.79d0d26b.css.map": "/snap-inventory/static/css/main.79d0d26b.css.map",
-    "main.53caf706.js.map": "/snap-inventory/static/js/main.53caf706.js.map",
+    "main.49ad3788.js.map": "/snap-inventory/static/js/main.49ad3788.js.map",
     "453.6ae5fd4b.chunk.js.map": "/snap-inventory/static/js/453.6ae5fd4b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.79d0d26b.css",
-    "static/js/main.53caf706.js"
+    "static/js/main.49ad3788.js"
   ]
 }

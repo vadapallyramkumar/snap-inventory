@@ -39,17 +39,10 @@ const generateColors = (count) => {
   return colors;
 };
 
-const Chart = ({ type, title, chartData, chartTitle }) => {
+const Chart = ({ type, title, chartData, chartTitle, labels }) => {
   const colors = ['#003f5c', '#2f4b7c', '#665191', '#a05195', '#d45087', '#f95d6a'] || generateColors(6);
   const data = {
-    labels: [
-      "API Suite",
-      "Amazon S3",
-      "Anaplan",
-      "Binary",
-      "DynamoDB",
-      "Flow",
-    ],
+    labels: labels,
     datasets: [
       {
         label: chartTitle,

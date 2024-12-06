@@ -35,17 +35,20 @@ const Dashboard = () => {
             title="Most revenue generated snap category"
             chartData={[250000, 456789, 150000, 120000, 180000, 95000]}
             chartTitle="Revenue ($)"
+            labels={[ "API Suite", "Amazon S3", "Anaplan", "Binary", "DynamoDB", "Flow", ]}
           />
           <Chart
             type="Pie"
             chartData={[2000, 1500, 1000, 850, 1200, 800]}
             chartTitle="Snap usage across categories"
             title="Snap usage across categories"
+            labels={[ "API Suite", "Amazon S3", "Anaplan", "Binary", "DynamoDB", "Flow", ]}
           />
           <Chart
             type="Line"
             chartTitle="Monthly Revenue ($)"
             title="Monthly Revenue ($)"
+            labels={[ "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", ]}
             chartData={[
               100000, 230000, 456789, 250000, 350000, 200000
             ]}
@@ -80,35 +83,35 @@ const Dashboard = () => {
               <tr className="bg-background-VERY_LIGHT  w-full">
                 <td className="py-2 px-4 w-1/5">Amazon S3 Connector</td>
                 <td className="py-2 px-4 w-1/5">Amazon S3</td>
-                <td className="py-2 px-4 w-1/5">1,500</td>
+                <td className="py-2 px-4 w-1/5">2,345</td>
                 <td className="py-2 px-4 w-1/5">450,000</td>
                 <td className="py-2 px-4 w-1/5">120</td>
               </tr>
               <tr className=" w-full">
                 <td className="py-2 px-4 w-1/5">Flow Orchestrator</td>
                 <td className="py-2 px-4 w-1/5">Flow</td>
-                <td className="py-2 px-4 w-1/5">2,345</td>
+                <td className="py-2 px-4 w-1/5">1,500</td>
                 <td className="py-2 px-4 w-1/5">200,000</td>
                 <td className="py-2 px-4 w-1/5">150</td>
               </tr>
               <tr className="bg-background-VERY_LIGHT  w-full">
                 <td className="py-2 px-4 w-1/5">Anaplan Snap</td>
                 <td className="py-2 px-4 w-1/5">Anaplan</td>
-                <td className="py-2 px-4 w-1/5">800</td>
+                <td className="py-2 px-4 w-1/5">1215</td>
                 <td className="py-2 px-4 w-1/5">90,000</td>
                 <td className="py-2 px-4 w-1/5">95</td>
               </tr>
               <tr className=" w-full">
-                <td className="py-2 px-4 w-1/5">Flow Orchestrator</td>
-                <td className="py-2 px-4 w-1/5">Flow</td>
-                <td className="py-2 px-4 w-1/5">2,345</td>
+                <td className="py-2 px-4 w-1/5">Azure SQL - Bulk Extract</td>
+                <td className="py-2 px-4 w-1/5">Azure SQL</td>
+                <td className="py-2 px-4 w-1/5">800</td>
                 <td className="py-2 px-4 w-1/5">200,000</td>
                 <td className="py-2 px-4 w-1/5">150</td>
               </tr>
               <tr className="bg-background-VERY_LIGHT  w-full">
-                <td className="py-2 px-4 w-1/5">Anaplan Snap</td>
-                <td className="py-2 px-4 w-1/5">Anaplan</td>
-                <td className="py-2 px-4 w-1/5">800</td>
+                <td className="py-2 px-4 w-1/5">SQS Acknowledge</td>
+                <td className="py-2 px-4 w-1/5">Amazon SQS</td>
+                <td className="py-2 px-4 w-1/5">750</td>
                 <td className="py-2 px-4 w-1/5">90,000</td>
                 <td className="py-2 px-4 w-1/5">95</td>
               </tr>

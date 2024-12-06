@@ -8,7 +8,22 @@ import S3Download from '../assets/s3Download.png';
 import s3Presigned from '../assets/s3Presigned.png';
 import s3restore from '../assets/s3Restore.png';
 import s3Select from '../assets/s3Select.png';
-import s3Upload from '../assets/s3Upload.png'
+import s3Upload from '../assets/s3Upload.png';
+import SQLBulkLoad from '../assets/SQLBulkLoad.png';
+import SQLExecute from '../assets/SQLExecute.png';
+import SQLStoreProcedure from '../assets/SQLStoreProcedure.png';
+import SQLTableList from '../assets/SQLTableList.png';
+import SQLUpdate from '../assets/SQLUpdate.png';
+import SQLPolybaseBulkLoad from '../assets/SQLPolybaseBulkLoad.webp';
+import SQLBulkExtract from '../assets/SQLBulkExtract.png';
+import SynapseBulkLoad from '../assets/SynapseBulkLoad.png';
+import SynapseDelete from '../assets/SynapseDelete.png';
+import SynapseExecute from '../assets/SynapseExecute.png';
+import SynapseInsert from '../assets/SynapseInsert.jpeg';
+import SynapseSelect from '../assets/SynapseSelect.png';
+import SynapseStoreProcedure from '../assets/SynapseStoreProcedure.png';
+import SynapseTableList from '../assets/SynapseTableList.jpeg';
+import SynapseUpdate from '../assets/SynapseUpdate.png';
 
 const snaps = [
   {
@@ -119,6 +134,180 @@ const snaps = [
     type: 'Write Snap',
     description: "S3 Upload snap to upload binary data to S3 objects",
     category: "Amazon S3",
+    version: "3.1.0",
+  },
+  {
+    id: 39,
+    name: "Azure SQL - Bulk Extract",
+    type: 'Read Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/20283393/Azure+SQL+-+Bulk+Extract',
+    snapImage: SQLBulkExtract,
+    description: "Azure SQL - Bulk Extract snap reads the data from the SQL server table on the Azure.",
+    category: "Azure SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 40,
+    name: "Azure SQL - Bulk Load",
+    type: 'Write Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/17727519/Azure+SQL+-+Bulk+Load',
+    snapImage: SQLBulkLoad,
+    description: "Azure SQL - Bulk Load snap to perform a bulk load operation from the input view document stream to the target table by using SQLServerBulkCopy API. It uses a memory buffer to send records to the target table instead of a temporary CSV file. The Batch size and Bulk copy timeout values can be used to tune the performance and memory used.",
+    category: "Azure SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 41,
+    name: "Azure SQL - Execute",
+    type: 'Write Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/31424514/Azure+SQL+-+Execute',
+    snapImage: SQLExecute,
+    description: "Azure SQL - Execute Snap to execute simple DML (SELECT, INSERT, UPDATE, DELETE) type statements. ",
+    category: "Azure SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 42,
+    name: "Azure SQL - PolyBase Bulk Load",
+    type: 'Write Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/1439118/PolyBase+Bulk+Load',
+    snapImage: SQLPolybaseBulkLoad,
+    description: "Azure SQL - PolyBase Bulk Load Snap Performs a bulk load operation from the input view document stream to the target table. The Snap supports SQL Server database with PolyBase feature, which includes SQL Server 2016 (on-premise) and Data Warehouse. It first formats the input view document stream to a temporary CSV file in Azure Blob storage and then sends a bulk load request to the database to load the temporary Blob file to the target table.",
+    category: "Azure SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 43,
+    name: "Azure SQL - Stored Procedure",
+    type: 'Write Snap',
+    snapImage: SQLStoreProcedure,
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/31555588/Azure+SQL+-+Stored+Procedure',
+    description: "Azure SQL - Stored Procedure snap invokes a stored procedure in the Azure SQL Database. If the procedure contains any OUT parameters, they are written to the output view.",
+    category: "Azure SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 44,
+    name: "Azure SQL - Table List",
+    type: 'Read Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/17858590/Azure+SQL+-+Table+List',
+    snapImage: SQLTableList,
+    description: "Azure SQL - Table List snap outputs a list of tables in a database. The Snap will connect to the database, read its metadata, and output a document for each table found in the database. The table names are output in a topological order so that tables with the fewest dependencies are output first. In other words, if table A has a foreign key reference to table B, then table B will be output before A. The ordering is intended to ease the process of replicating a group of tables from one database to another.",
+    category: "Azure SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 45,
+    name: "Azure SQL - Update",
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/17694746/Azure+SQL+-+Update',
+    snapImage: SQLUpdate,
+    type: 'Write Snap',
+    description: "Azure SQL - Update snap executes a SQL update using the input document. Keys from the document will be used as the columns to update and their values will be the updated value in the column.",
+    category: "Azure SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 49,
+    name: "Azure Synapse SQL - Bulk Load",
+    type: 'Write Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2548924417/Azure+Synapse+SQL+-+Bulk+Load',
+    snapImage: SynapseBulkLoad,
+    description: "Azure Synapse SQL - Bulk Load snap to perform a bulk load operation from an external location to the target table. The input data is first written to a temporary data file and is loaded from the data file into the target table.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 50,
+    name: "Azure Synapse SQL - Delete",
+    type: 'Write Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2538897506/Azure+Synapse+SQL+-+Delete',
+    snapImage: SynapseDelete,
+    description: "Azure Synapse SQL - Delete snap to delete records from the target tables.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 51,
+    name: "Azure Synapse SQL - Execute",
+    type: 'Write Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2538340469/Azure+Synapse+SQL+-+Execute',
+    snapImage: SynapseExecute,
+    description: "Azure SQL - Execute Snap to execute Transact-SQL queries.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 52,
+    name: "Azure Synapse SQL - Insert",
+    type: 'Write Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2538537039/Azure+Synapse+SQL+-+Insert',
+    snapImage: SynapseInsert,
+    description: "Azure Synapse SQL - Insert Snap to insert new records into database tables. The Snap executes an SQL Insert statement with the specified values. Key-value pairs are used to insert columns and their respective values into the table columns. Missing columns from the document results in inserting null values into them.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 53,
+    name: "Azure Synapse SQL - Select",
+    type: 'Read Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2538537061/Azure+Synapse+SQL+-+Select',
+    snapImage: SynapseSelect,
+    description: "Azure Synapse SQL - Select Snap to fetch data from an Azure Synapse SQL Server database by providing a table name and configuring the connection.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 54,
+    name: "Azure Synapse SQL - Stored Procedure",
+    type: 'Write Snap',
+    snapImage: SynapseStoreProcedure,
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2538766418/Azure+Synapse+SQL+-+Stored+Procedure',
+    description: "Azure Synapse SQL - Stored Procedure Snap to execute stored procedures in the Azure Synapse SQL Database.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 55,
+    name: "Azure Synapse SQL - Table List",
+    type: 'Read Snap',
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2555314289/Azure+Synapse+SQL+-+Table+List',
+    snapImage: SynapseTableList,
+    description: "Azure Synapse SQL - Table List Snap to read data from Azure Synapse SQL and list tables.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 56,
+    name: "Azure Synapse SQL - Update",
+    docLink: 'https://docs-snaplogic.atlassian.net/wiki/spaces/SD/pages/2538733639/Azure+Synapse+SQL+-+Update',
+    snapImage: SynapseUpdate,
+    type: 'Write Snap',
+    description: "Azure Synapse SQL - Update Snap to update existing records in the target tables with the specified conditions. Document keys are used as the column update, and their values are used as the updated column value.",
+    category: "Azure Synapse SQL",
+    version: "3.1.0",
+  },
+  {
+    id: 46,
+    name: "ASB Acknowledge",
+    type: 'Read Snap',
+    description: "This is Snap C.",
+    category: "Azure Service Bus",
+    version: "3.1.0",
+  },
+  {
+    id: 47,
+    name: "ASB Consumer",
+    type: 'Read Snap',
+    description: "This is Snap C.",
+    category: "Azure Service Bus",
+    version: "3.1.0",
+  },
+  {
+    id: 48,
+    name: "ASB Procedure",
+    type: 'Write Snap',
+    description: "This is Snap C.",
+    category: "Azure Service Bus",
     version: "3.1.0",
   },
   {
@@ -305,6 +494,39 @@ const snaps = [
     category: "Amazon SQS",
     version: "3.1.0",
   },
+  {
+    id: 35,
+    name: "Anaplan Action",
+    type: 'Write Snap',
+    description: "This is Snap C.",
+    category: "Anaplan",
+    version: "3.1.0",
+  },
+  {
+    id: 36,
+    name: "Anaplan Read",
+    type: 'Read Snap',
+    description: "This is Snap C.",
+    category: "Anaplan",
+    version: "3.1.0",
+  },
+  {
+    id: 37,
+    name: "Anaplan Upload",
+    type: 'Write Snap',
+    description: "This is Snap C.",
+    category: "Anaplan",
+    version: "3.1.0",
+  },
+  {
+    id: 38,
+    name: "Anaplan Write",
+    type: 'Write Snap',
+    description: "This is Snap C.",
+    category: "Anaplan",
+    version: "3.1.0",
+  },
+  
 ];
 
 const categories = [
@@ -317,6 +539,7 @@ const categories = [
     "Anaplan",
     "Azure SQL",
     "Azure Service Bus",
+    "Azure Synapse SQL",
     "Binary",
     "Birst",
     "Box",

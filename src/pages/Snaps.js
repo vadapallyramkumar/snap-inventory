@@ -1,13 +1,10 @@
-import React from 'react'
-import SnapExplorer from '../components/SnapExplore';
-import { snaps, categories } from '../data/snaps';
+import React from 'react';
+import SnapsInventory from '../components/SnapInventory';
 
 function Snaps({ isAdmin }) {
   return (
-    <div>
-      <SnapExplorer snaps={snaps} categories={categories} isAdmin={isAdmin} />
-    </div>
-  )
+    <SnapsInventory isAdmin={isAdmin} />
+  );
 }
 
-export default Snaps
+export default Snaps;

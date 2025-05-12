@@ -14,7 +14,7 @@ const Sidebar = ({ menuItems, activeItem, setActiveItem, isAdmin }) => {
             onClick={() => setActiveItem(index)}
             key={index}
             className={`${activeItem === index ? "bg-active" : "bg-background"}
-            flex items-center px-6 py-3 text-gray-400 hover:text-white hover:bg-active
+            flex items-center px-6 py-3 hover:text-gray-400 hover:bg-active
             hover:cursor-pointer`}
           >
             {item.icon}
